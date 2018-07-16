@@ -1,0 +1,17 @@
+{
+  "name": "ghgql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "airtable": "^0.5.6",
+    "graphql-client": "^2.0.1",
+    "serverless": "^1.28.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
