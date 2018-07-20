@@ -69,6 +69,9 @@ function parsePullRequest(pullRequest) {
         boolLgtm = true;
     }
     let boolIsApproved = false;
+    if (isApproved != null){
+        boolIsApproved = true;
+    }
 
     return new PullRequest(prNode.number, prNode.title, prNode.url, prNode.createdAt, prNode.updatedAt, kind, status,
         boolLgtm, boolIsApproved, sig, prNode.merged, prNode.author.login);
