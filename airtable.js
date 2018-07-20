@@ -32,7 +32,9 @@ exports.updateRecordByPr = (record, callback) => {
                     "Status": record._status,
                     "LGTM'ed?": record._isLgtm,
                     "Approved": record._isApproved,
-                    "Sig": record._responsibleSig
+                    "Sig": record._responsibleSig,
+                    "k/k PR Author": record._author,
+                    "Merged": record._isMerged
                 }, function(err, record) {
                     if (err) { console.error(err); return; }
                     console.log(record);
@@ -53,7 +55,9 @@ exports.addNewRecord = (record, callback) => {
         "Status": record._status,
         "LGTM'ed?": record._isLgtm,
         "Approved": record._isApproved,
-        "Sig": record._responsibleSig
+        "Sig": record._responsibleSig,
+        "k/k PR Author": record._author,
+        "Merged": record._isMerged
     }, function(err, record) {
         if (err) { callback(err, null); }
         callback(null, record);
