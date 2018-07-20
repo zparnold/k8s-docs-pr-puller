@@ -1,5 +1,5 @@
 module.exports = class PullRequest {
-  constructor(prNum, prName, prLink, createdDate, updatedDate, kind, status, isLgtm, isApproved, responsibleSig){
+  constructor(prNum, prName, prLink, createdDate, updatedDate, kind, status, isLgtm, isApproved, responsibleSig, isMerged, author){
 
       this._prNum = prNum;
       this._prName = prName;
@@ -11,5 +11,7 @@ module.exports = class PullRequest {
       this._isLgtm = isLgtm;
       this._isApproved = isApproved;
       this._responsibleSig = responsibleSig;
+      this._isMerged = isMerged;
+      this._author = author;
   }
 };
