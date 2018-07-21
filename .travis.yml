@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - '8.10'
+before_install:
+  - openssl aes-256-cbc -K $encrypted_919fc135590a_key -iv $encrypted_919fc135590a_iv
+    -in serverless.yml.enc -out serverless.yml -d
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master

@@ -12,21 +12,12 @@ function updateRecord(record){
                 else console.log(res);
             });
         } else {
-            if(!deepCompare(record, response)){
              PrTable.updateRecordByPr(record, function (err, res) {
                  if (err) console.log(err.message);
              });
-            } else {
-                console.log('Record not changed...skipping.')
-            }
 
         }
     });
-}
-
-//Returns true if the two objects fields are equivalent
-function deepCompare(ghRecord, atRecord) {
-    return ghRecord._prNum === atRecord["PR Number"];
 }
 
 module.exports.run = (event, context) => {
