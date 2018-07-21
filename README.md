@@ -1,4 +1,6 @@
 # K8s Docs PR Puller
+[![Build Status](https://travis-ci.org/zparnold/k8s-docs-pr-puller.svg?branch=master)](https://travis-ci.org/zparnold/k8s-docs-pr-puller)
+
 
 The purpose of this serverless repo is to be used to synchronize and aggregate
 open PR's against the `kubernetes/kubernetes` repo, and the docs release
